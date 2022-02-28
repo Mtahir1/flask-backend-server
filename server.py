@@ -1,10 +1,15 @@
-from flask import Flask, request
+from crypt import methods
+from flask import Flask, jsonify, request
 from github import Github, UnknownObjectException, RateLimitExceededException
 import re
 
 app = Flask(__name__)
 git_object = Github() # When sensitive data then .env should be used
 git_user = "Kodex-AI"
+
+@app.route('/',methods=['GET'])
+def hello():
+    return jsonify({"response":"This is Kodex AI Analysis"})
 # Repos API Route
 @app.route("/repos")
 def members():
