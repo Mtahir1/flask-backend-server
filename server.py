@@ -55,4 +55,4 @@ def fetching():
     return {"message":output_message}
 
 if __name__ == "__main__":
-    app.run(debug=True) # As we are in Dev envrionment
+    app.run(host="0.0.0.0",threaded=True,port=5000) # As we are in Dev envrionment
