@@ -1,13 +1,13 @@
 from flask import Flask, jsonify, request
 from github import Github, UnknownObjectException, RateLimitExceededException
 import re
-#from flask_cors import CORS
+from flask_cors import CORS
 import sys
 
 print(sys.path)
 
 app = Flask(__name__)
-#CORS(app)
+CORS(app)
 git_object = Github() # When sensitive data then .env should be used
 git_user = "Kodex-AI"
 
