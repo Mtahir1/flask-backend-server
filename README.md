@@ -1,6 +1,6 @@
 ## flask-backend-server
 
-Is hosted on Heroku: 
+Link to Heroku Host: 
 
 https://kodex-ai-app.herokuapp.com/
 
