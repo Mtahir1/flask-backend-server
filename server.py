@@ -1,9 +1,13 @@
-from crypt import methods
 from flask import Flask, jsonify, request
 from github import Github, UnknownObjectException, RateLimitExceededException
 import re
+#from flask_cors import CORS
+import sys
+
+print(sys.path)
 
 app = Flask(__name__)
+#CORS(app)
 git_object = Github() # When sensitive data then .env should be used
 git_user = "Kodex-AI"
 
@@ -14,6 +18,7 @@ def hello():
 @app.route("/repos")
 def members():
     try:
+        print(sys.path)
         user = git_object.get_user(git_user)
         repository = user.get_repo('coding-challenges-input')
         source_file_content = repository.get_contents("python-challenge")
