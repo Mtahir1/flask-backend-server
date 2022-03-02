@@ -4,7 +4,7 @@ Link to Heroku Host:
 
 https://kodex-ai-app.herokuapp.com/
 
-Valid GET routes:
+Routes:
 
 https://kodex-ai-app.herokuapp.com/ <br>
 https://kodex-ai-app.herokuapp.com/repos
